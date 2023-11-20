@@ -1,0 +1,172 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cortasa</title>
+</head>
+<body>
+    <header>
+    <h1>Tu Tienda Online <br>CORTASA<br></h1>
+        <div class="botones-header">
+            <!-- index.html -->
+            <button class="boton-inicio-sesion" onclick="abrirModal('modalIniciarSesion')"><i class="fas fa-user"></i> Iniciar Sesión</button>
+            <button class="boton-registro" onclick="abrirModal('modalRegistrarse')"><i class="fas fa-user-plus"></i> Registro</button>
+            <span class="notificacion"><i class="fas fa-bell"></i></span>
+        </div>
+    </header>
+
+     <!-- Agrega la ventana modal -->
+     <!-- Ventana modal de inicio de sesión -->
+     <div id="modalIniciarSesion" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modalIniciarSesion')">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <!-- Contenido del formulario de inicio de sesión -->
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario">
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena">
+                <button type="button" onclick="iniciarSesion()">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ventana modal de registro -->
+    <div id="modalRegistrarse" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modalRegistrarse')">&times;</span>
+            <h2>Registrarse</h2>
+            <form>
+                <!-- Contenido del formulario de registro -->
+                <label for="usuario">Nombre:</label>
+                <input type="text" id="usuario" name="usuario">
+
+                <label for="usuario">Correo:</label>
+                <input type="text" id="usuario" name="usuario">
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena">
+                <button type="button" onclick="registrarse()">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ventana modal de compra -->
+    <div id="modalCompra" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modalCompra')">&times;</span>
+            <h2>Confirmar Compra</h2>
+            <form>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+
+                <label for="tarjeta">Número de Tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" pattern="\d{16}" placeholder="1234 5678 9012 3456" required>
+
+                <label for="precio">Precio Total:</label>
+                <span id="precio">Precio aquí</span>
+
+                <button type="button" onclick="confirmarCompra()">Confirmar Compra</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Navegacion -->
+    <nav class="categorias-menu">
+        <ul>
+            <li><a href="#">Retroexcavadoras</a></li>
+            <li><a href="#">Tractores </a></li>
+            <li><a href="#">Compactadoras</a></li>
+            <li><a href="#">|</a></li>
+            <li><a href="ubicaciones.html">Ubicaciones</a></li>
+            <!-- Agrega más categorías según sea necesario -->
+        </ul>
+    </nav>
+
+    <div class="filtro">
+        <label for="categoria">Filtrar por categoría:</label>
+        <select id="categoria">
+            <option value="todas">Todas las categorías</option>
+            <option value="electronica">Electrónica</option>
+            <option value="ropa">Ropa</option>
+            <option value="libros">Libros</option>
+            <!-- Agrega más opciones según tus categorías -->
+        </select>
+
+        <label for="rango-precio">Filtrar por rango de precio:</label>
+        <select id="rango-precio">
+            <option value="todos">Todos los precios</option>
+            <option value="0-50">0 - 50</option>
+            <option value="51-100">51 - 100</option>
+            <option value="101-200">101 - 200</option>
+            <!-- Agrega más opciones según tus rangos de precios -->
+        </select>
+    </div>  
+
+    <section class="productos">
+        <!-- Aquí van los productos -->
+        <div class="producto">
+            <img src="img/camiones_en_venta_camiones_en_renta.jpg" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Descripción del producto.</p>
+            <button class="boton-compra button" onclick="abrirModal('modalCompra')">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="img/gruas-de-construccion-tipos-caracteristicas.jpg" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Descripción del producto.</p>
+            <button class="boton-compra button" onclick="abrirModal('modalCompra')">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="img/4.jpg" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Descripción del producto.</p>
+            <button class="boton-compra button" onclick="abrirModal('modalCompra')">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="img/evitar-robo-maquinaria-pesada.jpg" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Descripción del producto.</p>
+            <button class="boton-compra button" onclick="abrirModal('modalCompra')">Comprar</button>
+        </div>  
+
+        <div class="producto">
+            <img src="img/5.png" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Descripción del producto.</p>
+            <button class="boton-compra button" onclick="abrirModal('modalCompra')">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="img/6.jpg" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Descripción del producto.</p>
+            <button class="boton-compra button" onclick="abrirModal('modalCompra')">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="img/gruas-de-construccion-tipos-caracteristicas.jpg" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Descripción del producto.</p>
+            <button class="boton-compra button" onclick="abrirModal('modalCompra')">Comprar</button>
+        </div>
+
+        <!-- Repite esta estructura para más productos -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tu Tienda Online</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

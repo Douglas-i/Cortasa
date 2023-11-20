@@ -1,0 +1,44 @@
+/* estilos.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #e4b600;
+    color: #0c0239;
+    text-align: center;
+    padding: 10px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;    
+    /* margin-top: 20px; */
+}
+
+/* Estilos para los popups de los marcadores */
+.leaflet-popup-content-wrapper {
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+}
+
+.leaflet-popup-content {
+    margin: 10px;
+}
+
+/* Estilos para el icono del marcador */
+.leaflet-marker-icon {
+    filter: invert(36%) sepia(93%) saturate(477%) hue-rotate(150deg) brightness(94%) contrast(89%);
+}
+
+.leaflet-pane {
+    z-index: 400;
+}
+
+a {
+    color: #e4b600;
+}

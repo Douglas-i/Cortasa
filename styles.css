@@ -1,0 +1,170 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0c0239;
+    color: #e4b600;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones-header {
+    margin-top: 10px;
+}
+
+/* Estilo de los botones en el encabezado */
+.boton-inicio-sesion, .boton-registro {
+    background-color: #e4b600; /* Color de fondo verde */
+    color: #0c0239;
+    border: solid #0c0239;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.notificacion {
+    font-size: 22px;
+    color: #e4b600; /* Color naranja para la notificación */
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Estilo de la ventana modal */
+.modal {
+    display: none; /* Por defecto, la modal está oculta */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;    
+}
+
+.modal-contenido {
+    background-color: #0c0239;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    border: solid #0c0239;
+}
+
+.modal-contenido form {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.modal-contenido form button{
+    background-color: #e4b600;
+    padding: 0.4rem;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilo del menú de categorías */
+.categorias-menu {
+    background-color: #f4f4f4; /* Color de fondo gris claro */
+    padding: 10px;
+    text-align: center;
+}
+
+.categorias-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categorias-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.categorias-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.filtro {
+    background-color: #0c023974; /* Color de fondo gris claro */
+    padding: 10px;
+    text-align: center;
+}
+
+.filtro label, .filtro select {
+    margin-right: 20px;
+}
+
+/* Productos */
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 20rem;
+    height: 20rem;
+}
+
+.producto img {
+    max-width: 70%;
+    height: 50%;
+}
+
+/* Estilo del botón */
+.producto button {
+    background-color: #0c0239; /* Color de fondo verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    /* padding: 1em; */
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+}
